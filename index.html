@@ -14,9 +14,9 @@
     <title>Email List</title>
 </head>
 <body>
-    <div id="app">
-    <ul>
-        <li v-for="email in emails">{{email}}</li>
+    <div id="app" class="vh-100 d-flex align-items-center justify-content-center">
+    <ul v-if="(emails.length === 10)">
+        <li class="text-uppercase" v-for="email in emails">{{email}}</li>
     </ul>
     </div>
 

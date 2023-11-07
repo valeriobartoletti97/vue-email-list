@@ -17,6 +17,6 @@ createApp({
         })
         }
         
-        console.log(this.emails)
+        console.log(this.emails.length)
     }
 }).mount('#app')

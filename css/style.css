@@ -1,0 +1,18 @@
+:root{
+    --rich-black: #000814ff;
+    --oxford-blue: #001d3dff;
+    --yale-blue: #003566ff;
+    --mikado-yellow: #ffc300ff;
+    --gold: #ffd60aff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+#app{
+    background-color: var(--yale-blue);
+    color: var(--mikado-yellow)
+}
