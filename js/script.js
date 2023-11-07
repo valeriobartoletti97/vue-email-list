@@ -3,20 +3,20 @@ const {createApp} = Vue;
 createApp({
     data(){
         return{
-           emails: []
+           emails: [],
+           myUri: 'https://flynn.boolean.careers/exercises/api/',
+           reqBody: 'random/mail',
+           nEmail: 10,
         }
     },
     methods:{
         
     },
     mounted(){
-        for(let i = 0; i < 10; i++){
-            axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((email)=>{
-            console.log(email.data.response);
+        for(let i = 0; i < this.nEmail; i++){
+            axios.get(`${this.myUri}${this.reqBody}`).then((email)=>{
             this.emails.push(email.data.response)
         })
         }
-        
-        console.log(this.emails.length)
     }
 }).mount('#app')
